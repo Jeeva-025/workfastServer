@@ -53,6 +53,7 @@ const cors=require("cors");
 require("./versions/v1/models/association");
 const team=require("./versions/v1/models/teamModel");
 const UserTeam=require("./versions/v1/models/userTeamModel");
+const relation=require("./versions/v1/models/association");
 
 dotenv.config();
 

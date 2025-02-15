@@ -1,6 +1,6 @@
-const { DataTypes }= require( "sequelize");
-const {sequelize} =require( "./db.js");
-// Step 2: Define the Model
+const {DataTypes} = require( "sequelize");
+const {sequelize} = require( "./db.js");
+
 const Invite = sequelize.define('Invite', {
   id: {
     type: DataTypes.INTEGER,
@@ -12,9 +12,9 @@ const Invite = sequelize.define('Invite', {
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true, // Ensure email is unique
+    unique: true, 
     validate: {
-      isEmail: true, // Validate email format
+      isEmail: true, 
     },
   },
   invitedBy:{

@@ -12,8 +12,8 @@ controller.invitedPeople = async (req, res) => {
       include: [
         {
           model: People,
-          as: "invitedByPerson",  // Alias for the relation
-          attributes: ["user_name"],  // Only get the user_name field
+          as: "invitedByPerson",  
+          attributes: ['user_name'],
         },
       ],
     });
@@ -23,7 +23,7 @@ controller.invitedPeople = async (req, res) => {
       invitedByPerson: user.invitedByPerson.user_name 
     }));
 
-    res.json(responseData);
+    res.status(200).json(responseData);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal server error" });
