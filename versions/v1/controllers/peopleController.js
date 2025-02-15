@@ -38,7 +38,7 @@ controller.getAllPeople = async (req, res) => {
     if (users.length > 0) {
       
 
-      res.json(usersWithImages);
+      res.status(200).json(users);
     } else {
       res.json({ message: "No data found matching the criteria." });
     }
