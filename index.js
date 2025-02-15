@@ -22,7 +22,7 @@ dotenv.config();
 const app = express();
 
 app.use("/uploads", express.static(path.join(__dirname, "versions/v1/uploads")));
-app.use(cors({origin: "*" , credentials: true}));
+app.use(cors({origin: "http://localhost:3000" , credentials: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
