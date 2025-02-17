@@ -30,9 +30,7 @@ controller.findUsersByTeamName = async (req, res) => {
       },
     });
 
-    if (teamMembers.length === 0) {
-      return res.status(404).json({ message: "No users found" });
-    }
+    
 
     const arr = teamMembers.map((user) => user.user_id);
 

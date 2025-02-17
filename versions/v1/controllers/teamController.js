@@ -59,11 +59,9 @@ controller.Delete = async (req, res) => {
       where: { user_id: user_ids, team_id: team_id, status: 1 }
     });
 
-    if (users.length === 0) {
-      return res.status(404).json({ message: "No users found in the team" });
-    }
+    
 
-    // Update users
+    
     for (const userData of users) {
       userData.leftdate = new Date();
       userData.status = 0;
