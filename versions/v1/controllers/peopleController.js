@@ -36,15 +36,9 @@ controller.getAllPeople = async (req, res) => {
     });
 
     if (users.length > 0) {
-      const usersWithImages = users.map(user => {
-        // Assuming the imagename field has the correct filename and is stored in the 'uploads' directory
-         user.imagename = `http://localhost:8080/uploads/${user.imagename}`;
-        return {
-          ...user.dataValues, // keep all user data
-        };
-      });
+      
 
-      res.json(usersWithImages);
+      res.json(users);
     } else {
       res.json({ message: "No data found matching the criteria." });
     }

@@ -33,7 +33,7 @@ const UserTeam = sequelize.define("users", {
    allowNull:false, 
   }
 }, {
-  tableName: "userTeams", // Name of your database table
+  tableName: "userteams", // Name of your database table
   timestamps: false,
 });
 

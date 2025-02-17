@@ -28,7 +28,7 @@ const UserChannel = sequelize.define('userChannel', {
   },
 }, 
 {
-  tableName: 'userChannels',
+  tableName: 'userchannels',
   timestamps: true,
 });
 
